@@ -11,7 +11,7 @@
         <p>Description: {contact.description}</p>
     </div>
     <button>Edit</button>
-    <button on:click={addContact.deleteContact(contact.id)}>Delete</button>
+    <button on:click={addContact.deleteContac}>Delete</button>
     {/each}
 </div>
 

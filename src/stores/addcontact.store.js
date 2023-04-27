@@ -3,21 +3,21 @@ import { v4 as uuidv4 } from 'uuid';
 
 const contacts = [
     {
-        id: uuidv4(),
+        id: '1',
         name: 'John', 
         phone: '121313',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc'
     }
 ];
 
-const contact = {
-    id: uuidv4(),
-    name: "John Doe",
-    phone: "1234567890",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc"
-}
+// const contact = {
+//     id: uuidv4(),
+//     name: "John Doe",
+//     phone: "1234567890",
+//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc"
+// }
 
-const store = writable(contact);
+const store = writable(undefined);
 
 export default {
     subscribe: store.subscribe,
@@ -38,9 +38,9 @@ export default {
     viewContacts() {
         return contacts;
     },
-    deleteContact(id) {
+    deleteContact(name) {
         store.update(() => {
-            contacts.filter((contact) => contact.id !== id);
+            contacts.filter((contact) => contact.name !== name);
         });
     },
 
