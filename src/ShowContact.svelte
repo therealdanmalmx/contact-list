@@ -3,7 +3,6 @@
 
 </script>
 
-<h5>Show Contact</h5>
 <div class="show-contact">
     {#each addContact.viewContacts() as contact}
     <div class="contact-card">
