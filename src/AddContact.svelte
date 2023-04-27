@@ -13,10 +13,6 @@
     <textarea id="description" name="decription" bind:value={addStore.description} />
     <button on:click={addStore.addContact}>Add Contact</button>
 </div>
-{#if addStore.addContactLength}
-    {addStore.contacts}
-
-{/if}
 
 <style>
     .input-width {
