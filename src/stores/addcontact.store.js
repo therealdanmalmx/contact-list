@@ -35,14 +35,13 @@ export default {
     addContactLength() {
         contacts.length > 0
     },
+    viewContacts() {
+        return contacts;
+    },
     deleteContact(id) {
-        store.update((store) => {
-            contacts.filter((contact) => contact.id !== store.id);
+        store.update(() => {
+            contacts.filter((contact) => contact.id !== id);
         });
     },
-    viewContacts() {
-
-        return contacts;
-    }
 
 };
