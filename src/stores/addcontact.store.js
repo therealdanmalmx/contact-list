@@ -38,9 +38,9 @@ export default {
     viewContacts() {
         return contacts;
     },
-    deleteContact(name) {
+    deleteContact(id) {
         store.update(() => {
-            contacts.filter((contact) => contact.name !== name);
+            contacts.filter((contact) => contact.id !== id);
         });
     },
 
